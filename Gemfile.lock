@@ -1,0 +1,39 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    concurrent-ruby (1.0.5)
+    connection_pool (2.2.1)
+    mustermann (1.0.2)
+    pg (1.0.0)
+    puma (3.11.2)
+    rack (2.0.5)
+    rack-protection (2.0.1)
+      rack
+    redis (4.0.1)
+    rmagick (2.16.0)
+    sequel (5.8.0)
+    sidekiq (5.1.3)
+      concurrent-ruby (~> 1.0)
+      connection_pool (~> 2.2, >= 2.2.0)
+      rack-protection (>= 1.5.0)
+      redis (>= 3.3.5, < 5)
+    sinatra (2.0.1)
+      mustermann (~> 1.0)
+      rack (~> 2.0)
+      rack-protection (= 2.0.1)
+      tilt (~> 2.0)
+    tilt (2.0.8)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  pg
+  puma
+  rmagick
+  sequel
+  sidekiq
+  sinatra
+
+BUNDLED WITH
+   1.16.1
