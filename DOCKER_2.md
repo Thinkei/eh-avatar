@@ -44,7 +44,7 @@ docker build -t ehavatar .
 
 ```
 RUN apt-get update -qq --fix-missing \
-  && apt-get install -y libmagickwand-dev
+  && apt-get install -y libmagickwand-dev fonts-cantarell lmodern ttf-aenigma ttf-georgewilliams ttf-bitstream-vera ttf-sjfonts tv-fonts ghostscript
 ```
 
 - Build again. And it is sure to be successful. Start web server and sidekiq
@@ -77,7 +77,6 @@ docker run \
 -e DATABASE_URL=postgres://username:password@my-postgres:5432/ehavatar \
 -e REDIS_URL=redis://my-redis:6379 \
 -v $(pwd)/tmp:/app/tmp \
--p 9292:9292 \
 eh-avatar bundle exec sidekiq -r ./config/environment.rb
 ```
 
